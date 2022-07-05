@@ -1,38 +1,114 @@
 .App {
   text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.overlay {
+  opacity: 0.85;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.moving-background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./assets/background/parallax-bg.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 40% 40%;
+}
+
+.main-nav {
+  font-weight: bold;
+  font-size: 23px;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px fuchsia;
+}
+
+.main-nav:hover {
+  text-decoration: overline;
+}
+
+.connection {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #1c1c1c;
+}
+
+.connection-nav:hover {
+  background-color: fuchsia;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main-title {
+  text-shadow: 1px 1px 3px fuchsia;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text {
+  text-shadow: 1px 1px 3px fuchsia;
+    color: black;
+}
+
+.button-calc {
+  border: none;
+  border-radius: 10px;
+  padding-left: 22px;
+  padding-right: 22px;
+  font-size: 60px;
+  color: black;
+  cursor: pointer;
+  background: none;
+}
+
+.input-mint {
+  border: none;
+  width: 70px;
+  margin: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 20px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: black;
+}
+
+.now-mint {
+  border: none;
+  margin: 30px;
+  font-weight: bold;
+  color: #fff;
+  background-color: fuchsia;
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.now-mint:hover {
+  border: none;
+  margin: 30px;
+  font-weight: bold;
+  color: #fff;
+  background-color: black;
 }
