@@ -16,20 +16,8 @@ const Nav = ({ accounts, setAccounts }) => {
 
   return (
     <Flex justify="space-between" align="center" padding="30px">
-      {/* left side - social media icons */}
       <Flex justify="space-around" width="40%" padding="0 75px">
-        {/*         <Link href="https://www.facebook.com">
-          <Image src={Facebook} boxSize="42px" margin="0 15px" />
-        </Link>
-        <Link href="https://www.twitter.com">
-          <Image src={Twitter} boxSize="42px" margin="0 15px" />
-        </Link>
-        <Link href="https://www.gmail.com">
-          <Image src={Email} boxSize="42px" margin="0 15px" />
-        </Link> */}
       </Flex>
-
-      {/* right side - sections and connect */}
       <Flex justify="space-around" align="center" width="40%" padding="30px">
         <Box margin="0 25px" className="main-nav">
           ABOUT
@@ -44,7 +32,6 @@ const Nav = ({ accounts, setAccounts }) => {
         </Box>
         <Spacer />
       </Flex>
-
       {isConnected ? (
         <Box margin="0 25px">Connected </Box>
       ) : (
@@ -58,8 +45,7 @@ const Nav = ({ accounts, setAccounts }) => {
           padding="15px"
           margin="0 15px"
           fontWeight="bold"
-          className="connection-nav"
-        >
+          className="connection-nav" >
           CONNECT WALLET
         </Button>
       )}

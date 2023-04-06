@@ -1,18 +1,17 @@
-const hre = require("hardhat");
+const hre = require("hardhat")
 
 async function main() {
-  const GoldenFoxNFT = await hre.ethers.getContractFactory("GoldenFoxNFT");
-  const goldenFoxNFT = await GoldenFoxNFT.deploy();
+  const GoldenFoxNFT = await hre.ethers.getContractFactory("GoldenFoxNFT")
+  const goldenFoxNFT = await GoldenFoxNFT.deploy()
 
-  await goldenFoxNFT.deployed();
+  await goldenFoxNFT.deployed()
 
-  console.log("GoldenFoxNFT deployed to:", goldenFoxNFT.address);
+  console.log("GoldenFoxNFT deployed to:", goldenFoxNFT.address)
 }
-
 
 main()
   .then(() => process.exit(0))
   .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
+    console.error(error)
+    process.exit(1)
+  })
